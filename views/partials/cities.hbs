@@ -2,6 +2,8 @@
 
 <div class="citylist">
     <ul>
-        <li><a href="/lists/{{id}}">{{city}}</a></li>
+        {{#each cities}}
+            <li><a href="/lists/{{cityName}}">{{cityName}}</a></li>
+        {{/each}}
     </ul>
 </div>

@@ -11,6 +11,6 @@ function listCities () {
     return conn('shops')
     .join('shops_products_junction', 'shops.id', '=', 'shops_products_junction.shop_id')
     .join('products', 'products.id', '=', 'shops_products_junction.product_id')
-    .select('shops_products_junction.city')
-    .first()
+    .select('shops_products_junction.city as cityName')
+    // .first()
 }
