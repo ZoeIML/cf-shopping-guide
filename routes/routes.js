@@ -6,7 +6,7 @@ module.exports = router
 
 // Function files:
 const sl = require('../functions/shoplist')
-const cl = require('../function/citylist')
+const cl = require('../functions/citylist')
 
 // Home route: 
 router.get('/', (req, res) => {
@@ -15,8 +15,15 @@ router.get('/', (req, res) => {
 
 // List the cities route
 router.get('/lists', (req, res) => {
-    res.render('citylist')
+    cl.listCities()
+        .then (results => {
+            console.log(results)
+            res.render('citylist', results)
         })
+        res.render('citylist')
+        })
+        
+        
 
 // list shops in city route
 router.get('/lists/:id', (req, res) => {
