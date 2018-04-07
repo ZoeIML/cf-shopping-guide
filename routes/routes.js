@@ -5,7 +5,8 @@ const router = express.Router()
 module.exports = router
 
 // Function files:
-const cl = require('../functions/citylist')
+const sl = require('../functions/shoplist')
+const cl = require('../function/citylist')
 
 // Home route: 
 router.get('/', (req, res) => {
@@ -13,23 +14,16 @@ router.get('/', (req, res) => {
 })
 
 // List the cities route
-// router.get('/lists', (req, res) => {
-//     cl.listCities()
-//         .then(results => {
-//             console.log(results)
-//             return res.render('lists', {city: results})
-//         })
-//         .catch(err => {
-//             res.status(500).send('Database Error: ' + err.message)
-//           })
-//         })
+router.get('/lists', (req, res) => {
+    res.render('citylist')
+        })
 
 // list shops in city route
 router.get('/lists/:id', (req, res) => {
     const id = req.params.id
-    cl.listShops(id) 
+    sl.listShops(id) 
         .then (shopList => {
-            console.log(shopList)
+            // console.log(shopList)
             const shops = {
                 shops: shopList.map((s) => {
                     return {
@@ -42,7 +36,7 @@ router.get('/lists/:id', (req, res) => {
                     }
                 })
             }
-            return res.render('citylist', shops)
+            return res.render('shoplist', shops)
         })
         .catch(err => {
                     res.status(500).send('Database Error: ' + err.message)

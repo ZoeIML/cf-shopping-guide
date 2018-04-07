@@ -1,0 +1,12 @@
+{{> navbar}}
+
+{{#each shops}}
+
+    <h3>{{productName}}</h3> 
+    Type: {{productType}} <br>
+    Brand: {{productBrand}} <br>
+    
+    At: <a href="{{shopURL}}">{{shopName}}</a> <br>
+    Address: {{shopAdd}}    
+
+{{/each}}
