@@ -21,6 +21,7 @@ router.get('/lists', (req, res) => {
             const cities = {
                 cities: cityList.map((c) => {
                     return {
+                        cityID: c.cityID,
                         cityName: c.cityName
                     }
                 })
@@ -34,7 +35,8 @@ router.get('/lists', (req, res) => {
         
         
 
-// list shops in city route
+// list shops in city route:
+
 router.get('/lists/:id', (req, res) => {
     const id = req.params.id
     sl.listShops(id) 
