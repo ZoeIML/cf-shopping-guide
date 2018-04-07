@@ -16,16 +16,27 @@ router.get('/', (req, res) => {
 // List the cities route
 router.get('/lists', (req, res) => {
     cl.listCities()
-        .then (results => {
-            console.log(results)
-            res.render('citylist', results)
+        .then (cityList => {
+            console.log(cityList)
+            const cities = {
+                cities: cityList.map(c => {
+                    return {
+                        cityId: c.cityId,
+                        cityName: c.cityName
+                    }
+                })
+            }
+            res.render('citylist', cities)
         })
-        res.render('citylist')
-        })
+        .catch(err => {
+            res.status(500).send('Database Error: ' + err.message)
+          })
+    })
         
         
 
-// list shops in city route
+// list shops in city route:
+
 router.get('/lists/:id', (req, res) => {
     const id = req.params.id
     sl.listShops(id) 
