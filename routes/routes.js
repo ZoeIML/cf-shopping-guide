@@ -19,9 +19,9 @@ router.get('/lists', (req, res) => {
         .then (cityList => {
             console.log(cityList)
             const cities = {
-                cities: cityList.map((c) => {
+                cities: cityList.map(c => {
                     return {
-                        cityID: c.cityID,
+                        cityId: c.cityId,
                         cityName: c.cityName
                     }
                 })
