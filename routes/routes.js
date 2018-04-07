@@ -9,5 +9,5 @@ module.exports = router
 
 // Home route: 
 router.get('/', (req, res) => {
-    res.send('It works!')
+    res.render('index')
 })
