@@ -10,7 +10,8 @@ exports.seed = function(knex, Promise) {
         {id: 3, city: 'Auckland', product_id: 3, shop_id: 2},
         {id: 4, city: 'Auckland', product_id: 1, shop_id: 3},
         {id: 5, city: 'Auckland', product_id: 1, shop_id: 1},
-        {id: 6, city: 'Auckland', product_id: 3, shop_id: 3}
+        {id: 6, city: 'Auckland', product_id: 3, shop_id: 3},
+        {id: 7, city: 'Gisborne', product_id: 4, shop_id: 4}
       ])
     })
 }
