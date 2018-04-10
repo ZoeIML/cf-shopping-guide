@@ -12,7 +12,7 @@ function listShops (city) {
    return conn('shops')
     .join('shops_products_junction', 'shops.id', "=", 'shops_products_junction.shop_id')
     .join('products', 'products.id', "=", 'shops_products_junction.product_id')
-    .where('shops_products_junction.city', "=", city)
+    .where('shops.city', "=", city)
     .select('shops.name as shopName', 
             'products.name as productName', 
             'products.type as productType', 

@@ -6,7 +6,6 @@ module.exports = router
 
 // Function files:
 const sl = require('../functions/shoplist')
-const cl = require('../functions/citylist')
 
 // Home route: 
 router.get('/', (req, res) => {
@@ -15,22 +14,7 @@ router.get('/', (req, res) => {
 
 // List the cities route
 router.get('/lists', (req, res) => {
-    cl.listCities()
-        .then (cityList => {
-            console.log(cityList)
-            const cities = {
-                cities: cityList.map(c => {
-                    return {
-                        cityId: c.cityId,
-                        cityName: c.cityName
-                    }
-                })
-            }
-            res.render('citylist', cities)
-        })
-        .catch(err => {
-            res.status(500).send('Database Error: ' + err.message)
-          })
+    res.render('citylist')
     })
         
         
@@ -41,7 +25,7 @@ router.get('/lists/:id', (req, res) => {
     const id = req.params.id
     sl.listShops(id) 
         .then (shopList => {
-            // console.log(shopList)
+            console.log(id)
             const shops = {
                 shops: shopList.map((s) => {
                     return {
