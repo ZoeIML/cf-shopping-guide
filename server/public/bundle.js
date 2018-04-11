@@ -18287,7 +18287,7 @@ var App = function App() {
   return _react2.default.createElement(
     'h1',
     null,
-    'React development has begun!'
+    'Test'
   );
 };
 
