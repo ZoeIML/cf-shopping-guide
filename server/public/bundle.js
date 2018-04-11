@@ -19655,8 +19655,19 @@ var _HomeInfo = __webpack_require__(78);
 
 var _HomeInfo2 = _interopRequireDefault(_HomeInfo);
 
+var _Footer = __webpack_require__(79);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Data:
+
+// App:
+
+
+// Components:
+// React:
 var App = function App() {
   return _react2.default.createElement(
     _reactRouterDom.HashRouter,
@@ -19668,8 +19679,9 @@ var App = function App() {
         'div',
         { className: 'routes' },
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _HomeNavbar2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _HomeInfo2.default })
+        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _HomeNavbar2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _HomeInfo2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Footer2.default })
       )
     )
   );
@@ -23412,7 +23424,7 @@ var Home = function Home() {
     _react2.default.createElement(
       "h1",
       null,
-      "Home title"
+      "Cruelty Free Shopping Guide"
     )
   );
 };
@@ -23439,11 +23451,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var HomeNavbar = function HomeNavbar() {
   return _react2.default.createElement(
     "div",
-    { className: "navbar" },
+    { className: "navbarhome" },
     _react2.default.createElement(
-      "h1",
-      null,
-      "Navbar here"
+      "div",
+      { className: "nav" },
+      _react2.default.createElement(
+        "a",
+        { href: "/lists" },
+        "Lists"
+      ),
+      _react2.default.createElement(
+        "a",
+        { href: "/maps" },
+        "Maps"
+      ),
+      _react2.default.createElement(
+        "a",
+        { href: "/moreinfo" },
+        "More Info"
+      )
     )
   );
 };
@@ -23467,19 +23493,92 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import {Link} from 'react-router-dom'
+
+// If it's in ALL CAPS it will need to be a link
+
 var HomeInfo = function HomeInfo() {
   return _react2.default.createElement(
     "div",
     { className: "home-info" },
     _react2.default.createElement(
-      "h1",
+      "p",
       null,
-      "Home info here"
+      "Welcome to the cruelty-free shopping guide for New Zealand. Looking for cruelty-free products in New Zealand? We can help with finding what you are looking for! Browse through the lists to look for product types, brands or shops in your area."
+    ),
+    _react2.default.createElement(
+      "h2",
+      null,
+      "Upcoming Features:"
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      "This is an expanding project, and our mission is to provide a comprehensice cruelty-free shopping guide throughout New Zealand. We are regularly expanding the lists, and our next feature will be maps of your local area! Check our SOCIAL MEDIA accounts for updates!"
+    ),
+    _react2.default.createElement(
+      "h2",
+      null,
+      "Feedback:"
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      "We are keen to hear your feedback about our site, whether you have comments about the site itself or the lists. We reference THISLIST when it comes to cruelty-free products: you can find more information HERE. We also welcome you to submit products, brands or shops in your area! You can make suggestions with our FORM, or contact us on SOCIAL MEDIA."
     )
   );
 };
 
 exports.default = HomeInfo;
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  return _react2.default.createElement(
+    "div",
+    { className: "footer" },
+    _react2.default.createElement(
+      "a",
+      { href: "https://placeholder.com" },
+      _react2.default.createElement("img", { src: "http://via.placeholder.com/600x65" })
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "details" },
+      _react2.default.createElement(
+        "p",
+        null,
+        "Created by Zoe ",
+        _react2.default.createElement("br", null),
+        "Github: ",
+        _react2.default.createElement(
+          "a",
+          { href: "https://github.com/ZoeIML" },
+          "ZoeIML"
+        ),
+        _react2.default.createElement("br", null),
+        "License: MIT"
+      )
+    )
+  );
+};
+
+exports.default = Footer;
 
 /***/ })
 /******/ ]);
