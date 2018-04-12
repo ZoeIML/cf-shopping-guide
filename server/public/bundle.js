@@ -19706,21 +19706,21 @@ var _Home = __webpack_require__(76);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Navbar = __webpack_require__(77);
-
-var _Navbar2 = _interopRequireDefault(_Navbar);
-
-var _HomeInfo = __webpack_require__(78);
+var _HomeInfo = __webpack_require__(77);
 
 var _HomeInfo2 = _interopRequireDefault(_HomeInfo);
+
+var _Navbar = __webpack_require__(78);
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
 
 var _Footer = __webpack_require__(79);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _MoreInfo = __webpack_require__(80);
+var _HomeLink = __webpack_require__(80);
 
-var _MoreInfo2 = _interopRequireDefault(_MoreInfo);
+var _HomeLink2 = _interopRequireDefault(_HomeLink);
 
 var _CityList = __webpack_require__(81);
 
@@ -19730,20 +19730,25 @@ var _ShopList = __webpack_require__(82);
 
 var _ShopList2 = _interopRequireDefault(_ShopList);
 
-var _HomeLink = __webpack_require__(83);
+var _MoreInfo = __webpack_require__(83);
 
-var _HomeLink2 = _interopRequireDefault(_HomeLink);
+var _MoreInfo2 = _interopRequireDefault(_MoreInfo);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import MapList from './MapList'
-// import TheMap from '/.TheMap'
-//import ContactUs from '/.ContactUs'
+// import ContactUs from '/.ContactUs'
+// impost AddCF from './AddCF
+
+// Data:
+// PASS DATA AS PROPS!
 
 // App:
 
 
-// Components:
+// Consistent components
+
+
+// Home components:
 // React:
 var App = function App() {
   return _react2.default.createElement(
@@ -19767,7 +19772,17 @@ var App = function App() {
     )
   );
 };
+// import BrandList from './BrandList'
+// import ProductList from './ProductList'
 
+// Map components:
+// import MapList from './MapList'
+// import TheMap from '/.TheMap'
+
+// One-page components:
+
+
+// List components: 
 exports.default = App;
 
 /***/ }),
@@ -23464,6 +23479,61 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import {Link} from 'react-router-dom'
+
+// If it's in ALL CAPS it will need to be a link
+
+var HomeInfo = function HomeInfo() {
+  return _react2.default.createElement(
+    "div",
+    { className: "home-info" },
+    _react2.default.createElement(
+      "p",
+      null,
+      "Welcome to the cruelty-free shopping guide for New Zealand. Looking for cruelty-free products in New Zealand? We can help with finding what you are looking for! Browse through the lists to look for product types, brands or shops in your area."
+    ),
+    _react2.default.createElement(
+      "h2",
+      null,
+      "Upcoming Features:"
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      "This is an expanding project, and our mission is to provide a comprehensice cruelty-free shopping guide throughout New Zealand. We are regularly expanding the lists, and our next feature will be maps of your local area! Check our SOCIAL MEDIA accounts for updates!"
+    ),
+    _react2.default.createElement(
+      "h2",
+      null,
+      "Feedback:"
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      "We are keen to hear your feedback about our site, whether you have comments about the site itself or the lists. We reference THISLIST when it comes to cruelty-free products: you can find more information HERE. We also welcome you to submit products, brands or shops in your area! You can make suggestions with our FORM, or contact us on SOCIAL MEDIA."
+    )
+  );
+};
+
+exports.default = HomeInfo;
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
@@ -23546,61 +23616,6 @@ var Navbar = function (_React$Component) {
 exports.default = Navbar;
 
 /***/ }),
-/* 78 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import {Link} from 'react-router-dom'
-
-// If it's in ALL CAPS it will need to be a link
-
-var HomeInfo = function HomeInfo() {
-  return _react2.default.createElement(
-    "div",
-    { className: "home-info" },
-    _react2.default.createElement(
-      "p",
-      null,
-      "Welcome to the cruelty-free shopping guide for New Zealand. Looking for cruelty-free products in New Zealand? We can help with finding what you are looking for! Browse through the lists to look for product types, brands or shops in your area."
-    ),
-    _react2.default.createElement(
-      "h2",
-      null,
-      "Upcoming Features:"
-    ),
-    _react2.default.createElement(
-      "p",
-      null,
-      "This is an expanding project, and our mission is to provide a comprehensice cruelty-free shopping guide throughout New Zealand. We are regularly expanding the lists, and our next feature will be maps of your local area! Check our SOCIAL MEDIA accounts for updates!"
-    ),
-    _react2.default.createElement(
-      "h2",
-      null,
-      "Feedback:"
-    ),
-    _react2.default.createElement(
-      "p",
-      null,
-      "We are keen to hear your feedback about our site, whether you have comments about the site itself or the lists. We reference THISLIST when it comes to cruelty-free products: you can find more information HERE. We also welcome you to submit products, brands or shops in your area! You can make suggestions with our FORM, or contact us on SOCIAL MEDIA."
-    )
-  );
-};
-
-exports.default = HomeInfo;
-
-/***/ }),
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23657,30 +23672,30 @@ exports.default = Footer;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(12);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import {Link} from 'react-router-dom'
-
-var MoreInfo = function MoreInfo() {
-  return _react2.default.createElement(
-    "div",
-    { className: "more-info" },
-    _react2.default.createElement(
-      "h1",
-      null,
-      "More Info"
-    )
-  );
+var HomeLink = function HomeLink() {
+    return _react2.default.createElement(
+        'div',
+        { className: 'home-link' },
+        _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/' },
+            'Home'
+        )
+    );
 };
 
-exports.default = MoreInfo;
+exports.default = HomeLink;
 
 /***/ }),
 /* 81 */
@@ -23756,30 +23771,30 @@ exports.default = ShopList;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(12);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HomeLink = function HomeLink() {
-    return _react2.default.createElement(
-        'div',
-        { className: 'home-link' },
-        _react2.default.createElement(
-            _reactRouterDom.Link,
-            { to: '/' },
-            'Home'
-        )
-    );
+// import {Link} from 'react-router-dom'
+
+var MoreInfo = function MoreInfo() {
+  return _react2.default.createElement(
+    "div",
+    { className: "more-info" },
+    _react2.default.createElement(
+      "h1",
+      null,
+      "More Info"
+    )
+  );
 };
 
-exports.default = HomeLink;
+exports.default = MoreInfo;
 
 /***/ })
 /******/ ]);
