@@ -23792,6 +23792,36 @@ var MoreInfo = function MoreInfo() {
       "h1",
       null,
       "More Info"
+    ),
+    _react2.default.createElement(
+      "h2",
+      null,
+      "Mission Statement"
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      "This will be the mission statement"
+    ),
+    _react2.default.createElement(
+      "h2",
+      null,
+      "Cruelty-Free Sources"
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      "This is where I talk about where I get my info from"
+    ),
+    _react2.default.createElement(
+      "h2",
+      null,
+      "Want in?"
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      "This will be info about participating"
     )
   );
 };
