@@ -7,9 +7,9 @@ import Home from './Home'
 import HomeNavbar from './HomeNavbar'
 import HomeInfo from './HomeInfo'
 import Footer from './Footer'
-// import MoreInfo from './MoreInfo'
-// import CityList from './CityList'
-// import ShopList from './ShopList'
+import MoreInfo from './MoreInfo'
+import CityList from './CityList'
+import ShopList from './ShopList'
 // import MapList from './MapList'
 // import TheMap from '/.TheMap'
 
@@ -21,7 +21,10 @@ const App = () => {
         <div className="routes">
           <Route exact path='/' component={Home}/>
           <Route exact path='/' component={HomeNavbar}/>
-          <Route path='/' component={HomeInfo}/>
+          <Route exact path='/' component={HomeInfo}/>
+          <Route path='/moreinfo' component={MoreInfo}/>
+          <Route path='/citylist' component={CityList}/>
+          <Route path='/shoplist' component={ShopList}/>
           <Route path='/' component={Footer}/>
         </div>
       </div>
