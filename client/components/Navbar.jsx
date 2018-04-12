@@ -6,7 +6,7 @@ class Navbar extends React.Component {
   constructor (props) {
     super (props)
     this.state ={
-      lists:lists
+      lists: lists
     }
     this.showLists = this.showLists.bind(this)
     this.showMaps = this.showMaps.bind(this)

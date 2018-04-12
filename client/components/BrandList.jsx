@@ -4,10 +4,10 @@ import {Link} from 'react-router-dom'
 
 // ADD DATA FROM PROPS ONCE IN APP
 
-const ContactUs = () => {
+const BrandList = () => {
     return (
-        <h1>This will be a contact us form</h1>
+        <h1>This will be a brand list</h1>
     )
 }
 
-export default ContactUs
+export default BrandList

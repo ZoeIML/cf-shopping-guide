@@ -2,18 +2,32 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
-// Components:
+// Home components:
 import Home from './Home'
-import Navbar from './Navbar'
 import HomeInfo from './HomeInfo'
+
+// Consistent components
+import Navbar from './Navbar'
 import Footer from './Footer'
-import MoreInfo from './MoreInfo'
+import HomeLink from './HomeLink'
+
+// List components: 
 import CityList from './CityList'
 import ShopList from './ShopList'
-import HomeLink from './HomeLink'
+// import BrandList from './BrandList'
+// import ProductList from './ProductList'
+
+// Map components:
 // import MapList from './MapList'
 // import TheMap from '/.TheMap'
-//import ContactUs from '/.ContactUs'
+
+// One-page components:
+import MoreInfo from './MoreInfo'
+// import ContactUs from '/.ContactUs'
+// impost AddCF from './AddCF
+
+// Data:
+// PASS DATA AS PROPS!
 
 // App:
 const App = () => {
