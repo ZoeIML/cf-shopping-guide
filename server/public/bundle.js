@@ -19706,21 +19706,21 @@ var _Home = __webpack_require__(76);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Navbar = __webpack_require__(77);
-
-var _Navbar2 = _interopRequireDefault(_Navbar);
-
-var _HomeInfo = __webpack_require__(78);
+var _HomeInfo = __webpack_require__(77);
 
 var _HomeInfo2 = _interopRequireDefault(_HomeInfo);
+
+var _Navbar = __webpack_require__(78);
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
 
 var _Footer = __webpack_require__(79);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _MoreInfo = __webpack_require__(80);
+var _HomeLink = __webpack_require__(80);
 
-var _MoreInfo2 = _interopRequireDefault(_MoreInfo);
+var _HomeLink2 = _interopRequireDefault(_HomeLink);
 
 var _CityList = __webpack_require__(81);
 
@@ -19730,20 +19730,25 @@ var _ShopList = __webpack_require__(82);
 
 var _ShopList2 = _interopRequireDefault(_ShopList);
 
-var _HomeLink = __webpack_require__(83);
+var _MoreInfo = __webpack_require__(83);
 
-var _HomeLink2 = _interopRequireDefault(_HomeLink);
+var _MoreInfo2 = _interopRequireDefault(_MoreInfo);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import MapList from './MapList'
-// import TheMap from '/.TheMap'
-//import ContactUs from '/.ContactUs'
+// import ContactUs from '/.ContactUs'
+// impost AddCF from './AddCF
+
+// Data:
+// PASS DATA AS PROPS!
 
 // App:
 
 
-// Components:
+// Consistent components
+
+
+// Home components:
 // React:
 var App = function App() {
   return _react2.default.createElement(
@@ -19767,7 +19772,17 @@ var App = function App() {
     )
   );
 };
+// import BrandList from './BrandList'
+// import ProductList from './ProductList'
 
+// Map components:
+// import MapList from './MapList'
+// import TheMap from '/.TheMap'
+
+// One-page components:
+
+
+// List components: 
 exports.default = App;
 
 /***/ }),
@@ -23464,98 +23479,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(12);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Navbar = function (_React$Component) {
-  _inherits(Navbar, _React$Component);
-
-  function Navbar(props) {
-    _classCallCheck(this, Navbar);
-
-    var _this = _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).call(this, props));
-
-    _this.state = {
-      lists: lists
-    };
-    _this.showLists = _this.showLists.bind(_this);
-    _this.showMaps = _this.showMaps.bind(_this);
-    return _this;
-  }
-
-  _createClass(Navbar, [{
-    key: 'showLists',
-    value: function showLists(e) {
-      // const lists = e.target.id
-      this.setState({
-        cities: cities,
-        products: products,
-        shops: shops,
-        brands: brands
-      });
-    }
-  }, {
-    key: 'showMaps',
-    value: function showMaps(e) {}
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'navbar' },
-        _react2.default.createElement(
-          'div',
-          { id: 'lists', className: 'navbar-child', onClick: this.showLists },
-          'Lists'
-        ),
-        _react2.default.createElement(
-          'div',
-          { id: 'maps', className: 'navbar-child', onClick: this.showMaps },
-          'Maps'
-        ),
-        _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: '/moreinfo', id: 'navinfo', className: 'navbar-child' },
-          'More Info'
-        ),
-        _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: '/conactus', id: 'contactus', className: 'navbar-child' },
-          'Contact Us'
-        )
-      );
-    }
-  }]);
-
-  return Navbar;
-}(_react2.default.Component);
-
-exports.default = Navbar;
-
-/***/ }),
-/* 78 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -23599,6 +23522,100 @@ var HomeInfo = function HomeInfo() {
 };
 
 exports.default = HomeInfo;
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(12);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Navbar = function Navbar() {
+    return _react2.default.createElement(
+        'div',
+        { className: 'navbar' },
+        _react2.default.createElement(
+            'div',
+            { id: 'lists', className: 'navbar-child' },
+            'Lists'
+        ),
+        _react2.default.createElement(
+            'div',
+            { id: 'maps', className: 'navbar-child' },
+            'Maps'
+        ),
+        _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/moreinfo', id: 'navinfo', className: 'navbar-child' },
+            'More Info'
+        ),
+        _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/conactus', id: 'contactus', className: 'navbar-child' },
+            'Contact Us'
+        )
+    );
+};
+
+// class Navbar extends React.Component {
+//   constructor (props) {
+//     super (props)
+//     this.state ={
+//       lists: lists
+//     }
+//     this.showLists = this.showLists.bind(this)
+//     this.showMaps = this.showMaps.bind(this)
+//   }
+
+//   showLists (e) {
+//    // const lists = e.target.id
+//     this.setState({
+//       cities: cities,
+//       products: products,
+//       shops: shops,
+//       brands: brands
+//     })
+//   }
+
+//   showMaps (e) {
+
+//   }
+
+
+//   render () {
+// return (
+// <div className="navbar">
+//     <div id ="lists" className="navbar-child" onClick={this.showLists}>
+//       Lists
+//     </div>
+
+//     <div id ="maps" className="navbar-child" onClick={this.showMaps}>
+//       Maps
+//     </div>        
+
+//     <Link to={'/moreinfo'} id="navinfo" className="navbar-child">More Info</Link> 
+
+//     <Link to={'/conactus'} id="contactus" className="navbar-child">
+//       Contact Us
+//     </Link>
+// </div>
+//     )
+//   }
+// }
+
+exports.default = Navbar;
 
 /***/ }),
 /* 79 */
@@ -23657,30 +23674,30 @@ exports.default = Footer;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(12);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import {Link} from 'react-router-dom'
-
-var MoreInfo = function MoreInfo() {
-  return _react2.default.createElement(
-    "div",
-    { className: "more-info" },
-    _react2.default.createElement(
-      "h1",
-      null,
-      "More Info"
-    )
-  );
+var HomeLink = function HomeLink() {
+    return _react2.default.createElement(
+        'div',
+        { className: 'home-link' },
+        _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/' },
+            'Home'
+        )
+    );
 };
 
-exports.default = MoreInfo;
+exports.default = HomeLink;
 
 /***/ }),
 /* 81 */
@@ -23756,30 +23773,30 @@ exports.default = ShopList;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(12);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var HomeLink = function HomeLink() {
-    return _react2.default.createElement(
-        'div',
-        { className: 'home-link' },
-        _react2.default.createElement(
-            _reactRouterDom.Link,
-            { to: '/' },
-            'Home'
-        )
-    );
+// import {Link} from 'react-router-dom'
+
+var MoreInfo = function MoreInfo() {
+  return _react2.default.createElement(
+    "div",
+    { className: "more-info" },
+    _react2.default.createElement(
+      "h1",
+      null,
+      "More Info"
+    )
+  );
 };
 
-exports.default = HomeLink;
+exports.default = MoreInfo;
 
 /***/ })
 /******/ ]);
