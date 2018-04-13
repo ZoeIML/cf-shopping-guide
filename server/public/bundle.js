@@ -23547,10 +23547,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Header = function Header() {
   return _react2.default.createElement(
     'div',
-    { className: 'header-row' },
+    { className: 'header-row row' },
     _react2.default.createElement(
       'div',
-      { className: 'header-links-wrapper' },
+      { className: 'header-links-wrapper twelve-columns' },
       _react2.default.createElement(
         'div',
         { className: 'header-links' },
