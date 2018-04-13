@@ -23759,7 +23759,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Header = function Header() {
   return _react2.default.createElement(
     'div',
-    { className: 'header row' },
+    { className: 'header-row' },
     _react2.default.createElement(
       'div',
       { className: 'header-links-wrapper' },

@@ -1,3 +1,45 @@
-h1 {
-    color: pink;
+body {
+    background-color: #E8E8E8; 
 }
+
+h1 {
+    color: #DC7F9B; 
+}
+
+.header-row {
+    display: flex; 
+}
+
+.header-row {
+    border: solid #DC7F9B;
+    width: 95%;
+    margin: 0.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.header-links-wrapper div {
+    width: 95%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 60%;
+}
+
+.header-links a {
+    color: #94BFA7;
+    text-decoration-line: none;
+    justify-content: space-between;
+  }
+  
+  .header-links a:hover {
+    color: #E2B7D8;
+    text-decoration-line: none
+  }
