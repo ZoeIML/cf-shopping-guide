@@ -6,8 +6,8 @@ import {Link} from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className="header-row">
-      <div className="header-links-wrapper">
+    <div className="header-row row">
+      <div className="header-links-wrapper twelve-columns">
         <div className="header-links">
           <div className='header-link'>
             <Link to="/citylist">Cities</Link>

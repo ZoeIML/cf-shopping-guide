@@ -39,7 +39,7 @@ h2 {
 .header-row {
     border: solid #F3DE8A;
     background-color: #F3DE8A;
-    width: 95%;
+    width: 80%;
     margin: 0.5em;
     display: flex;
     justify-content: space-evenly;
