@@ -3,7 +3,7 @@
     #4ECDC4 - medium turquoise - UNSURE
     #F3DE8A - Buff (yellow)
     #E8477A - pink
-    #FFFFFF - white - UNSURE
+    #FFFFFF - white - UNSURE`
     */
 
 /* body */
@@ -24,8 +24,8 @@ body {
 }
 
 .header-row {
-    border: solid #292F36;
-    background-color: #292F36;
+    border: solid #F3DE8A;
+    background-color: #F3DE8A;
     width: 95%;
     margin: 0.5em;
     display: flex;
@@ -33,17 +33,17 @@ body {
     align-items: stretch;
 }
 
-.header-links-wrapper div {
+.header-links-wrapper {
     width: 95%;
     display: flex;
     align-items: stretch;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .header-links {
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: stretch;
     width: 60%;
 }
 
@@ -54,11 +54,21 @@ body {
   }
   
   .header-links a:hover {
-    color: #F3DE8A;
+    color: #292F36;
     text-decoration-line: none
   }
 
+  .header-link {
+      font-size: 1.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+  }
+
 /* Home Info */
+.homeinfo p {
+    background-color: #292F36;
+}
 
 /* Footer */
 
