@@ -1,11 +1,9 @@
+/* body */
 body {
-    background-color: #E8E8E8; 
+    background-color: #E4E6C3; 
 }
 
-h1 {
-    color: #DC7F9B; 
-}
-
+/* header */
 .header-row {
     display: flex; 
 }
@@ -43,3 +41,19 @@ h1 {
     color: #E2B7D8;
     text-decoration-line: none
   }
+
+/* Home Info */
+
+/* Footer */
+
+/* Home button */
+
+/* Lists */
+
+/* Home Info */
+
+/* More Info */
+
+/* Contact Us */
+
+/* ? Refactoring */
