@@ -11,11 +11,24 @@ body {
     background-color: #FFFFFF; 
 }
 
+p {
+    color: #292F36;
+}
+
+h1 {
+    color: #E8477A;
+}
+
+h2 {
+    color: #4ECDC4;
+}
+
 /* Home */
 .home {
     color: #E8477A;
     display: flex;
     align-items: stretch;
+    align-content: center;
 }
 
 /* header */
@@ -38,6 +51,7 @@ body {
     display: flex;
     align-items: stretch;
     justify-content: space-around;
+    flex-direction: column;
 }
 
 .header-links {
@@ -66,13 +80,38 @@ body {
   }
 
 /* Home Info */
-.homeinfo p {
-    background-color: #292F36;
+.home-info a {
+    color: #E8477A;
+    text-decoration-line: none;
+}
+
+.home-info a:hover {
+    color: #292F36;
+    text-decoration-line: none
 }
 
 /* Footer */
+.footer a {
+    color: #E8477A;
+    text-decoration-line: none;
+}
+
+.footer a:hover {
+    color: #292F36;
+    text-decoration-line: none
+}
 
 /* Home button */
+.home-link a {
+    color: #E8477A;
+    text-decoration-line: none;
+}
+
+.home-link a:hover {
+    color: #292F36;
+    text-decoration-line: none
+}
+
 
 /* Lists */
 

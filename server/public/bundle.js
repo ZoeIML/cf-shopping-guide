@@ -19756,12 +19756,12 @@ var App = function App() {
     null,
     _react2.default.createElement(
       'div',
-      { className: 'app-home' },
+      { className: 'app' },
       _react2.default.createElement(
         'div',
         { className: 'routes' },
-        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Header2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Home2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Header2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _HomeInfo2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _HomeLink2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/moreinfo', component: _MoreInfo2.default }),
@@ -23627,11 +23627,6 @@ var Footer = function Footer() {
   return _react2.default.createElement(
     "div",
     { className: "footer" },
-    _react2.default.createElement(
-      "a",
-      { href: "https://placeholder.com" },
-      _react2.default.createElement("img", { src: "http://via.placeholder.com/600x65" })
-    ),
     _react2.default.createElement(
       "div",
       { className: "details" },
