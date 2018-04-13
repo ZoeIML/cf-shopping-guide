@@ -7,7 +7,7 @@ import Home from './Home'
 import HomeInfo from './HomeInfo'
 
 // Consistent components
-import Navbar from './Navbar'
+import Header from './Header'
 import Footer from './Footer'
 import HomeLink from './HomeLink'
 
@@ -36,7 +36,7 @@ const App = () => {
       <div className="app-home">
         <div className="routes">
           <Route exact path='/' component={Home}/>
-          <Route exact path='/' component={Navbar}/>
+          <Route exact path='/' component={Header}/>
           <Route exact path='/' component={HomeInfo}/>
           <Route path='/' component={HomeLink}/>
           <Route path='/moreinfo' component={MoreInfo}/>
