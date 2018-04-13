@@ -1,6 +1,21 @@
+/* Colours:
+    #292F36 - Gunmetal
+    #4ECDC4 - medium turquoise - UNSURE
+    #F3DE8A - Buff (yellow)
+    #E8477A - pink
+    #FFFFFF - white - UNSURE
+    */
+
 /* body */
 body {
-    background-color: #E4E6C3; 
+    background-color: #FFFFFF; 
+}
+
+/* Home */
+.home {
+    color: #E8477A;
+    display: flex;
+    align-items: stretch;
 }
 
 /* header */
@@ -9,7 +24,8 @@ body {
 }
 
 .header-row {
-    border: solid #DC7F9B;
+    border: solid #292F36;
+    background-color: #292F36;
     width: 95%;
     margin: 0.5em;
     display: flex;
@@ -32,13 +48,13 @@ body {
 }
 
 .header-links a {
-    color: #94BFA7;
+    color: #E8477A;
     text-decoration-line: none;
     justify-content: space-between;
   }
   
   .header-links a:hover {
-    color: #E2B7D8;
+    color: #F3DE8A;
     text-decoration-line: none
   }
 
