@@ -1,3 +1,124 @@
-h1 {
-    color: pink;
+/* Colours:
+    #292F36 - Gunmetal
+    #4ECDC4 - medium turquoise - UNSURE
+    #F3DE8A - Buff (yellow)
+    #E8477A - pink
+    #FFFFFF - white - UNSURE`
+    */
+
+/* body */
+body {
+    background-color: #FFFFFF; 
 }
+
+p {
+    color: #292F36;
+}
+
+h1 {
+    color: #E8477A;
+}
+
+h2 {
+    color: #4ECDC4;
+}
+
+/* Home */
+.home {
+    color: #E8477A;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+}
+
+/* header */
+.header-row {
+    display: flex; 
+}
+
+.header-row {
+    border: solid #F3DE8A;
+    background-color: #F3DE8A;
+    width: 95%;
+    margin: 0.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.header-links-wrapper {
+    width: 95%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 60%;
+}
+
+.header-links a {
+    color: #E8477A;
+    text-decoration-line: none;
+    justify-content: space-between;
+  }
+  
+  .header-links a:hover {
+    color: #292F36;
+    text-decoration-line: none
+  }
+
+  .header-link {
+      font-size: 1.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+  }
+
+/* Home Info */
+.home-info a {
+    color: #E8477A;
+    text-decoration-line: none;
+}
+
+.home-info a:hover {
+    color: #292F36;
+    text-decoration-line: none
+}
+
+/* Footer */
+.footer a {
+    color: #E8477A;
+    text-decoration-line: none;
+}
+
+.footer a:hover {
+    color: #292F36;
+    text-decoration-line: none
+}
+
+/* Home button */
+.home-link a {
+    color: #E8477A;
+    text-decoration-line: none;
+}
+
+.home-link a:hover {
+    color: #292F36;
+    text-decoration-line: none
+}
+
+
+/* Lists */
+
+/* Home Info */
+
+/* More Info */
+
+/* Contact Us */
+
+/* ? Refactoring */

@@ -33,10 +33,10 @@ import MoreInfo from './MoreInfo'
 const App = () => {
   return (
     <Router>
-      <div className="app-home">
+      <div className="app">
         <div className="routes">
-          <Route exact path='/' component={Home}/>
-          <Route exact path='/' component={Header}/>
+          <Route path='/' component={Home}/>
+          <Route path='/' component={Header}/>
           <Route exact path='/' component={HomeInfo}/>
           <Route path='/' component={HomeLink}/>
           <Route path='/moreinfo' component={MoreInfo}/>
