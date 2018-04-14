@@ -19722,13 +19722,17 @@ var _HomeLink = __webpack_require__(80);
 
 var _HomeLink2 = _interopRequireDefault(_HomeLink);
 
-var _CityList = __webpack_require__(81);
+var _ListCities = __webpack_require__(81);
+
+var _ListCities2 = _interopRequireDefault(_ListCities);
+
+var _ListShops = __webpack_require__(84);
+
+var _ListShops2 = _interopRequireDefault(_ListShops);
+
+var _CityList = __webpack_require__(82);
 
 var _CityList2 = _interopRequireDefault(_CityList);
-
-var _ShopList = __webpack_require__(82);
-
-var _ShopList2 = _interopRequireDefault(_ShopList);
 
 var _MoreInfo = __webpack_require__(83);
 
@@ -19745,11 +19749,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // App:
 
 
-// Consistent components
-
-
-// Home components:
-// React:
+// List components: 
 var App = function App() {
   return _react2.default.createElement(
     _reactRouterDom.HashRouter,
@@ -19765,8 +19765,9 @@ var App = function App() {
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _HomeInfo2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _HomeLink2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/moreinfo', component: _MoreInfo2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/citylist', component: _CityList2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/shoplist', component: _ShopList2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/listcities', component: _ListCities2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/citylist/:name', component: _CityList2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/listshops', component: _ListShops2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Footer2.default })
       )
     )
@@ -19782,7 +19783,11 @@ var App = function App() {
 // One-page components:
 
 
-// List components: 
+// Consistent components
+
+
+// Home components:
+// React:
 exports.default = App;
 
 /***/ }),
@@ -23702,7 +23707,9 @@ var _reactRouterDom = __webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CityList = function CityList() {
+var citynames = 'names';
+
+var ListCities = function ListCities() {
   return _react2.default.createElement(
     'div',
     { className: 'city-list' },
@@ -23710,11 +23717,21 @@ var CityList = function CityList() {
       'h1',
       null,
       'Cities:'
+    ),
+    _react2.default.createElement(
+      _reactRouterDom.Link,
+      { to: '/citylist/names' },
+      'Auckland'
+    ),
+    _react2.default.createElement(
+      _reactRouterDom.Link,
+      { to: '/citylist/names' },
+      'Wellington'
     )
   );
 };
 
-exports.default = CityList;
+exports.default = ListCities;
 
 /***/ }),
 /* 82 */
@@ -23724,7 +23741,7 @@ exports.default = CityList;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _react = __webpack_require__(0);
@@ -23735,19 +23752,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // import {Link} from 'react-router-dom'
 
-var ShopList = function ShopList() {
-  return _react2.default.createElement(
-    "div",
-    { className: "shop-list" },
+var CityList = function CityList() {
     _react2.default.createElement(
-      "h1",
-      null,
-      "Shops:"
-    )
-  );
+        'h2',
+        null,
+        'A list of shops / brands etc'
+    );
 };
 
-exports.default = ShopList;
+exports.default = CityList;
 
 /***/ }),
 /* 83 */
@@ -23811,6 +23824,39 @@ var MoreInfo = function MoreInfo() {
 };
 
 exports.default = MoreInfo;
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import {Link} from 'react-router-dom'
+
+var ListShops = function ListShops() {
+  return _react2.default.createElement(
+    "div",
+    { className: "shop-list" },
+    _react2.default.createElement(
+      "h1",
+      null,
+      "Shops:"
+    )
+  );
+};
+
+exports.default = ListShops;
 
 /***/ })
 /******/ ]);

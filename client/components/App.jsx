@@ -12,8 +12,9 @@ import Footer from './Footer'
 import HomeLink from './HomeLink'
 
 // List components: 
+import ListCities from './ListCities'
+import ListShops from './ListShops'
 import CityList from './CityList'
-import ShopList from './ShopList'
 // import BrandList from './BrandList'
 // import ProductList from './ProductList'
 
@@ -40,8 +41,9 @@ const App = () => {
           <Route exact path='/' component={HomeInfo}/>
           <Route path='/' component={HomeLink}/>
           <Route path='/moreinfo' component={MoreInfo}/>
-          <Route path='/citylist' component={CityList}/>
-          <Route path='/shoplist' component={ShopList}/>
+          <Route path='/listcities' component={ListCities}/>
+          <Route path="/citylist/:name" component={CityList}/>
+          <Route path='/listshops' component={ListShops}/>
           <Route path='/' component={Footer}/>
         </div>
       </div>

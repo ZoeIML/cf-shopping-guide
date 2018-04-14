@@ -2,7 +2,7 @@ import React from 'react'
 
 // import {Link} from 'react-router-dom'
 
-const ShopList = () => {
+const ListShops = () => {
   return (
     <div className="shop-list">
       <h1>Shops:</h1>
@@ -10,4 +10,4 @@ const ShopList = () => {
   )
 }
 
-export default ShopList
+export default ListShops
