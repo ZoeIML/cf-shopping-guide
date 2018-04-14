@@ -19866,7 +19866,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Data:
 
-// import CityList from './CityList'
+// import ListProductsByType from './ListProductsByType'
 
 
 // Consistent components

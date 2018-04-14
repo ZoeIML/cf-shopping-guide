@@ -12,6 +12,9 @@ const Header = () => {
           <div className='header-link'>
             <Link to="/cities">Cities</Link>
           </div>
+          {/* <div className="header-link">
+            <Link to="/product-types">Products</Link>
+          </div> */}
           <div className="header-link">
             <Link to="/maps">Maps</Link>
           </div>

@@ -15,7 +15,7 @@ import HomeLink from './HomeLink'
 import ListCities from './ListCities'
 import ListShops from './ListShops'
 import ListShopsByProduct from './ListShopsByProduct'
-// import CityList from './CityList'
+// import ListProductsByType from './ListProductsByType'
 import ListProducts from './ListProducts'
 // import ListBrands from './ListBrands'
 
@@ -41,11 +41,16 @@ const App = (props) => {
           <Route path='/' component={Home}/>
           <Route path='/' component={Header}/>
           <Route exact path='/' component={HomeInfo}/>
+
           <Route path='/moreinfo' component={MoreInfo}/>
+
           <Route path='/cities' component={ListCities}/>
           <Route path='/:city/products' component={ListProducts}/>
           <Route path='/:city/shops' component={ListShops}/>
           <Route path="/:city/:product/shops" component={ListShopsByProduct}/>
+
+          {/* <Route path="/product-types" component={ListProductsByType}/> */}
+
           <Route path='/' component={Footer}/>
         </div>
       </div>
