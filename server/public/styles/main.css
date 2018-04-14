@@ -6,7 +6,7 @@
     #FFFFFF - white - UNSURE`
     */
 
-/* body */
+/* global aspects */
 body {
     background-color: #FFFFFF; 
 }
@@ -26,24 +26,20 @@ h2 {
 /* Home */
 .home {
     color: #E8477A;
-    display: flex;
-    align-items: stretch;
-    align-content: center;
+    text-align: center;
+    text-shadow: 0.5px 0.5px #292F36;
 }
 
 /* header */
 .header-row {
     display: flex; 
-}
-
-.header-row {
-    border: solid #F3DE8A;
-    background-color: #F3DE8A;
+    /* border: solid #F3DE8A;
+    background-color: #F3DE8A; */
     width: 80%;
     margin: 0.5em;
     display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
+    /* justify-content: space-evenly; */
+    align-content: center;
 }
 
 .header-links-wrapper {
@@ -62,13 +58,13 @@ h2 {
 }
 
 .header-links a {
-    color: #E8477A;
+    color: #292F36;
     text-decoration-line: none;
     justify-content: space-between;
   }
   
   .header-links a:hover {
-    color: #292F36;
+    color: #F3DE8A;
     text-decoration-line: none
   }
 
@@ -81,43 +77,91 @@ h2 {
 
 /* Home Info */
 .home-info a {
-    color: #E8477A;
+    color: #292F36;
     text-decoration-line: none;
 }
 
 .home-info a:hover {
-    color: #292F36;
+    color: #F3DE8A;
     text-decoration-line: none
 }
 
 /* Footer */
 .footer a {
-    color: #E8477A;
+    color: #292F36;
     text-decoration-line: none;
 }
 
 .footer a:hover {
-    color: #292F36;
+    color: #F3DE8A;
     text-decoration-line: none
 }
 
 /* Home button */
 .home-link a {
-    color: #E8477A;
+    color: #292F36;
     text-decoration-line: none;
 }
 
 .home-link a:hover {
-    color: #292F36;
+    color: #F3DE8A;
     text-decoration-line: none
 }
 
+/* External shop links */
+.shop-url a {
+    color: #292F36;
+    text-decoration-line: none;
+}
 
-/* Lists */
+.shop-url a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
 
-/* Home Info */
+/* List Products */
+.product-shop-link a {
+    color: #292F36;
+    text-decoration-line: none;
+}
+
+.product-shop-link a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
+
+/* ListCities */
+.city-options-wrapper a {
+    color: #292F36;
+    text-decoration-line: none;
+}
+
+.city-options-wrapper a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
 
 /* More Info */
+.more-info a {
+    color: #292F36;
+    text-decoration-line: none;
+}
+
+.more-info a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
+
+/* Home Info */
+.home-info a {
+    color: #292F36;
+    text-decoration-line: none;
+}
+
+.home-info a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
 
 /* Contact Us */
 
