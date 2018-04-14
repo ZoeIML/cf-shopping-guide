@@ -2471,7 +2471,7 @@ var ListProducts = function ListProducts(props) {
                         ),
                         _react2.default.createElement(
                             'div',
-                            { className: 'shop-link' },
+                            { className: 'product-shop-link' },
                             'Available',
                             _react2.default.createElement(
                                 _reactRouterDom.Link,

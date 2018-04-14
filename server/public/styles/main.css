@@ -88,12 +88,12 @@ h2 {
 
 /* Footer */
 .footer a {
-    color: #E8477A;
+    color: #292F36;
     text-decoration-line: none;
 }
 
 .footer a:hover {
-    color: #292F36;
+    color: #F3DE8A;
     text-decoration-line: none
 }
 
@@ -108,12 +108,60 @@ h2 {
     text-decoration-line: none
 }
 
+/* External shop links */
+.shop-url a {
+    color: #292F36;
+    text-decoration-line: none;
+}
 
-/* Lists */
+.shop-url a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
 
-/* Home Info */
+/* List Products */
+.product-shop-link a {
+    color: #292F36;
+    text-decoration-line: none;
+}
+
+.product-shop-link a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
+
+/* ListCities */
+.city-options-wrapper a {
+    color: #292F36;
+    text-decoration-line: none;
+}
+
+.city-options-wrapper a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
 
 /* More Info */
+.more-info a {
+    color: #292F36;
+    text-decoration-line: none;
+}
+
+.more-info a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
+
+/* Home Info */
+.home-info a {
+    color: #292F36;
+    text-decoration-line: none;
+}
+
+.home-info a:hover {
+    color: #F3DE8A;
+    text-decoration-line: none
+}
 
 /* Contact Us */
 
