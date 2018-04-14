@@ -1,13 +1,12 @@
 import React from 'react'
-
 import {Link} from 'react-router-dom'
 
-// ADD DATA FROM PROPS ONCE IN APP
+import ListShops from './ListShops'
 
-const BrandList = () => {
+const ListBrands = (props) => {
     return (
         <h1>This will be a brand list</h1>
     )
 }
 
-export default BrandList
+export default ListBrands

@@ -19730,9 +19730,13 @@ var _ListShops = __webpack_require__(84);
 
 var _ListShops2 = _interopRequireDefault(_ListShops);
 
-var _CityList = __webpack_require__(82);
+var _ListProducts = __webpack_require__(85);
 
-var _CityList2 = _interopRequireDefault(_CityList);
+var _ListProducts2 = _interopRequireDefault(_ListProducts);
+
+var _ListBrands = __webpack_require__(86);
+
+var _ListBrands2 = _interopRequireDefault(_ListBrands);
 
 var _MoreInfo = __webpack_require__(83);
 
@@ -19744,13 +19748,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // impost AddCF from './AddCF
 
 // Data:
-// PASS DATA AS PROPS!
 
-// App:
+
+// Consistent components
+
+
+// Home components:
+// React:
+var productData = __webpack_require__(88);
+
+// Map components:
+// import MapList from './MapList'
+// import TheMap from '/.TheMap'
+
+// One-page components:
+
+// import CityList from './CityList'
 
 
 // List components: 
-var App = function App() {
+
+var brandData = __webpack_require__(89);
+var shopData = __webpack_require__(90);
+
+// App:
+var App = function App(props) {
   return _react2.default.createElement(
     _reactRouterDom.HashRouter,
     null,
@@ -19765,29 +19787,18 @@ var App = function App() {
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Header2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _HomeInfo2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/moreinfo', component: _MoreInfo2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/listcities', component: _ListCities2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/citylist/:name', component: _CityList2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/listshops', component: _ListShops2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/cities', component: _ListCities2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/:city/products', component: _ListProducts2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: ':city/brands', component: _ListBrands2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/:city/shops', component: _ListShops2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: ':city/brands/shops', component: _ListShops2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/:city/products/shops', component: _ListShops2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Footer2.default })
       )
     )
   );
 };
-// import BrandList from './BrandList'
-// import ProductList from './ProductList'
 
-// Map components:
-// import MapList from './MapList'
-// import TheMap from '/.TheMap'
-
-// One-page components:
-
-
-// Consistent components
-
-
-// Home components:
-// React:
 exports.default = App;
 
 /***/ }),
@@ -23564,7 +23575,7 @@ var Header = function Header() {
           { className: 'header-link' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/listcities' },
+            { to: '/cities' },
             'Cities'
           )
         ),
@@ -23573,7 +23584,7 @@ var Header = function Header() {
           { className: 'header-link' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/shoplist' },
+            { to: '/shops' },
             'Shops'
           )
         ),
@@ -23705,64 +23716,67 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(12);
 
+var _ListProducts = __webpack_require__(85);
+
+var _ListProducts2 = _interopRequireDefault(_ListProducts);
+
+var _ListBrands = __webpack_require__(86);
+
+var _ListBrands2 = _interopRequireDefault(_ListBrands);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var citynames = 'names';
+var cityData = __webpack_require__(87);
 
 var ListCities = function ListCities() {
   return _react2.default.createElement(
     'div',
     { className: 'city-list' },
-    _react2.default.createElement(
-      'h2',
-      null,
-      'Cities:'
-    ),
-    _react2.default.createElement(
-      _reactRouterDom.Link,
-      { to: '/citylist/names' },
-      'Auckland'
-    ),
-    _react2.default.createElement(
-      _reactRouterDom.Link,
-      { to: '/citylist/names' },
-      'Wellington'
-    )
+    cityData.cities.map(function (city) {
+      return _react2.default.createElement(
+        'div',
+        { className: 'city-options-wrapper', key: city.id },
+        _react2.default.createElement(
+          'h2',
+          null,
+          city.name
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'products-link' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/' + city.name + '/products' },
+            'Products'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'brands-link' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/' + city.name + '/brands' },
+            'Brands'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'shops-link' },
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/' + city.name + '/shops' },
+            'Shops'
+          )
+        )
+      );
+    })
   );
 };
 
 exports.default = ListCities;
 
 /***/ }),
-/* 82 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import {Link} from 'react-router-dom'
-
-var CityList = function CityList() {
-    _react2.default.createElement(
-        'h2',
-        null,
-        'A list of shops / brands etc'
-    );
-};
-
-exports.default = CityList;
-
-/***/ }),
+/* 82 */,
 /* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23857,6 +23871,164 @@ var ListShops = function ListShops() {
 };
 
 exports.default = ListShops;
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(12);
+
+var _ListShops = __webpack_require__(84);
+
+var _ListShops2 = _interopRequireDefault(_ListShops);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ListProducts = function ListProducts(props) {
+    return _react2.default.createElement(
+        'h2',
+        null,
+        'Products:'
+    );
+};
+
+exports.default = ListProducts;
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(12);
+
+var _ListShops = __webpack_require__(84);
+
+var _ListShops2 = _interopRequireDefault(_ListShops);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ListBrands = function ListBrands(props) {
+    return _react2.default.createElement(
+        'h1',
+        null,
+        'This will be a brand list'
+    );
+};
+
+exports.default = ListBrands;
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    cities: [{
+        id: 1,
+        name: 'Auckland'
+    }, {
+        id: 2,
+        name: 'Wellington'
+    }]
+};
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    products: [{
+        id: 1,
+        type: 'Cleanser',
+        name: 'Sukin Cleanser',
+        Brand: 'Sukin',
+        Price: '$15'
+    }, {
+        id: 2,
+        type: 'Cleanser',
+        name: 'Aqua Marina',
+        Brand: 'Lush',
+        Price: '$25'
+    }, {
+        id: 3,
+        type: 'Mascara',
+        name: 'Test Mascara',
+        Brand: 'Wellington Test Brand',
+        Price: '$17.99'
+    }]
+};
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    brands: [{
+        id: 1,
+        name: 'Sukin'
+    }, {
+        id: 2,
+        name: 'Lush'
+    }, {
+        id: 3,
+        name: 'Wellington Test Brand'
+    }]
+};
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    shops: [{
+        id: 1,
+        name: 'Farmers',
+        Address: '123 St Lukes Mall',
+        City: 'Auckland'
+    }, {
+        id: 2,
+        name: 'Lush',
+        Address: '123 Queens Street',
+        City: 'Auckland'
+    }, {
+        id: 1,
+        name: 'Wellington Test Shop',
+        Address: '123 Cuba Street',
+        City: 'Wellington'
+    }]
+};
 
 /***/ })
 /******/ ]);
