@@ -24234,6 +24234,15 @@ var ContactUs = function (_React$Component) {
                         'div',
                         null,
                         _react2.default.createElement('input', { name: 'comments', onChange: this.handleChange, className: 'large-input-box' })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'submit-contact-us-btn', type: 'submit' },
+                            'Submit'
+                        )
                     )
                 )
             );

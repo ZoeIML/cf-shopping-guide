@@ -37,6 +37,9 @@ class ContactUs extends React.Component {
                     <div>
                         <input name="comments" onChange={this.handleChange} className="large-input-box"/>
                     </div>
+                    <div>
+                        <button className="submit-contact-us-btn" type='submit'>Submit</button>
+                    </div>
                 </form>
             </div>
           )
