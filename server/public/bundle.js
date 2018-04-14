@@ -2472,10 +2472,11 @@ var ListProducts = function ListProducts(props) {
                         _react2.default.createElement(
                             'div',
                             { className: 'shop-link' },
+                            'Available',
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: '/' + city + '/' + product.name + '/shops' },
-                                'Available from'
+                                ' here'
                             )
                         ),
                         _react2.default.createElement('br', null)
