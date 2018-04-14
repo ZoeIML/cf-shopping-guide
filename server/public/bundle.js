@@ -24149,7 +24149,7 @@ module.exports = {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -24171,41 +24171,91 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var ContactUs = function (_React$Component) {
-  _inherits(ContactUs, _React$Component);
+    _inherits(ContactUs, _React$Component);
 
-  function ContactUs(props) {
-    _classCallCheck(this, ContactUs);
+    function ContactUs(props) {
+        _classCallCheck(this, ContactUs);
 
-    var _this = _possibleConstructorReturn(this, (ContactUs.__proto__ || Object.getPrototypeOf(ContactUs)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (ContactUs.__proto__ || Object.getPrototypeOf(ContactUs)).call(this, props));
 
-    _this.state = {
-      name: '',
-      email: '',
-      comments: ''
-    };
-    _this.handleChange = _this.handleChange.bind(_this);
-    _this.handleSubmit = _this.handleSubmit.bind(_this);
+        _this.state = {
+            name: '',
+            email: '',
+            comments: ''
+        };
+        _this.handleChange = _this.handleChange.bind(_this);
+        _this.handleSubmit = _this.handleSubmit.bind(_this);
 
-    return _this;
-  }
-
-  _createClass(ContactUs, [{
-    key: 'handleChange',
-    value: function handleChange(e) {
-      this.setState(_defineProperty({}, e.target.name, e.target.value));
+        return _this;
     }
-  }, {
-    key: 'handleSubmit',
-    value: function handleSubmit(e) {
-      e.preventDefault();
-      this.props.addToList(this.state);
-    }
-  }]);
 
-  return ContactUs;
+    _createClass(ContactUs, [{
+        key: 'handleChange',
+        value: function handleChange(e) {
+            this.setState(_defineProperty({}, e.target.name, e.target.value));
+        }
+    }, {
+        key: 'handleSubmit',
+        value: function handleSubmit(e) {
+            e.preventDefault();
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'contact-us-wrapper' },
+                _react2.default.createElement(
+                    'h2',
+                    null,
+                    'Contact Us'
+                ),
+                _react2.default.createElement(
+                    'form',
+                    { className: 'contact-us', onSubmit: this.handleSubmit },
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        'Name: ',
+                        _react2.default.createElement('input', { name: 'name', onChange: this.handleChange })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        'Email: ',
+                        _react2.default.createElement('input', { name: 'email', onChange: this.handleChange })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        'Comments:'
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement('input', { name: 'comments', onChange: this.handleChange, className: 'large-input-box' })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return ContactUs;
 }(_react2.default.Component);
 
 exports.default = ContactUs;
+
+// render () {
+//     return (
+//       <div className='add-home-town'>
+//         <h2>Add</h2>
+//         <form onSubmit={this.handleAdd}>
+//           Person: <input name='person' onChange={this.handleChange} />
+//           Town: <input name='town' onChange={this.handleChange} />
+//           <button type='submit'>Add</button>
+//         </form>
+//         <p><Link to='/'>List</Link></p>
+//       </div>
 
 /***/ })
 /******/ ]);

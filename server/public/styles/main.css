@@ -164,5 +164,13 @@ h2 {
 }
 
 /* Contact Us */
+.large-input-box {
+    width: 90%;
+    height: 5em;
+}
+
+.contact-us {
+    color: #E8477A;
+}
 
 /* ? Refactoring */

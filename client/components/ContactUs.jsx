@@ -23,8 +23,36 @@ class ContactUs extends React.Component {
     
       handleSubmit (e) {
         e.preventDefault()
-        this.props.addToList(this.state)
+    
+      }
+
+      render () {
+          return (
+            <div className="contact-us-wrapper">
+                <h2>Contact Us</h2>
+                <form className="contact-us" onSubmit={this.handleSubmit}>
+                    <div>Name: <input name="name" onChange={this.handleChange}/></div>
+                    <div>Email: <input name="email" onChange={this.handleChange}/></div>
+                    <div>Comments:</div>
+                    <div>
+                        <input name="comments" onChange={this.handleChange} className="large-input-box"/>
+                    </div>
+                </form>
+            </div>
+          )
       }
 }
 
 export default ContactUs
+
+// render () {
+//     return (
+//       <div className='add-home-town'>
+//         <h2>Add</h2>
+//         <form onSubmit={this.handleAdd}>
+//           Person: <input name='person' onChange={this.handleChange} />
+//           Town: <input name='town' onChange={this.handleChange} />
+//           <button type='submit'>Add</button>
+//         </form>
+//         <p><Link to='/'>List</Link></p>
+//       </div>
