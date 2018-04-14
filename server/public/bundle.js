@@ -19860,24 +19860,15 @@ var _MoreInfo = __webpack_require__(89);
 
 var _MoreInfo2 = _interopRequireDefault(_MoreInfo);
 
+var _ContactUs = __webpack_require__(94);
+
+var _ContactUs2 = _interopRequireDefault(_ContactUs);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import ContactUs from '/.ContactUs'
 // impost AddCF from './AddCF
 
 // Data:
-
-// import ListProductsByType from './ListProductsByType'
-
-
-// Consistent components
-
-
-// Home components:
-// React:
-var brandData = __webpack_require__(90);
-
-// App:
 
 // import ListBrands from './ListBrands'
 
@@ -19889,6 +19880,18 @@ var brandData = __webpack_require__(90);
 
 
 // List components: 
+var brandData = __webpack_require__(90);
+
+// App:
+
+// import ListProductsByType from './ListProductsByType'
+
+
+// Consistent components
+
+
+// Home components:
+// React:
 var App = function App(props) {
   return _react2.default.createElement(
     _reactRouterDom.HashRouter,
@@ -19904,6 +19907,7 @@ var App = function App(props) {
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Header2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _HomeInfo2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/moreinfo', component: _MoreInfo2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/contactus', component: _ContactUs2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/cities', component: _ListCities2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/:city/products', component: _ListProducts2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/:city/shops', component: _ListShops2.default }),
@@ -24133,6 +24137,75 @@ module.exports = {
         name: 'Wellington Test Brand'
     }]
 };
+
+/***/ }),
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ContactUs = function (_React$Component) {
+  _inherits(ContactUs, _React$Component);
+
+  function ContactUs(props) {
+    _classCallCheck(this, ContactUs);
+
+    var _this = _possibleConstructorReturn(this, (ContactUs.__proto__ || Object.getPrototypeOf(ContactUs)).call(this, props));
+
+    _this.state = {
+      name: '',
+      email: '',
+      comments: ''
+    };
+    _this.handleChange = _this.handleChange.bind(_this);
+    _this.handleSubmit = _this.handleSubmit.bind(_this);
+
+    return _this;
+  }
+
+  _createClass(ContactUs, [{
+    key: 'handleChange',
+    value: function handleChange(e) {
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: 'handleSubmit',
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      this.props.addToList(this.state);
+    }
+  }]);
+
+  return ContactUs;
+}(_react2.default.Component);
+
+exports.default = ContactUs;
 
 /***/ })
 /******/ ]);

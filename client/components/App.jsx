@@ -25,7 +25,7 @@ import ListProducts from './ListProducts'
 
 // One-page components:
 import MoreInfo from './MoreInfo'
-// import ContactUs from '/.ContactUs'
+import ContactUs from './ContactUs'
 // impost AddCF from './AddCF
 
 // Data:
@@ -43,6 +43,7 @@ const App = (props) => {
           <Route exact path='/' component={HomeInfo}/>
 
           <Route path='/moreinfo' component={MoreInfo}/>
+          <Route path='/contactus' component={ContactUs}/>
 
           <Route path='/cities' component={ListCities}/>
           <Route path='/:city/products' component={ListProducts}/>
