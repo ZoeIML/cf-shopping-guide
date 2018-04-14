@@ -1563,10 +1563,34 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import {Link} from 'react-router-dom'
+var shopData = __webpack_require__(88);
 
 var ListShops = function ListShops(props) {
-  return _react2.default.createElement("div", { className: "shop-list" });
+  var city = props.match.params.city;
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'shop-list-wrapper' },
+    shopData.shops.map(function (shop) {
+      if (shop.city === city) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'shop-list', key: shop.id },
+          shop.name,
+          shop.address,
+          _react2.default.createElement(
+            'div',
+            { className: 'shop-url' },
+            _react2.default.createElement(
+              'a',
+              { href: '' + shop.url },
+              shop.url
+            )
+          )
+        );
+      }
+    })
+  );
 };
 
 exports.default = ListShops;
