@@ -24066,48 +24066,59 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _reactRouterDom = __webpack_require__(6);
 
-// import {Link} from 'react-router-dom'
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var MoreInfo = function MoreInfo() {
   return _react2.default.createElement(
-    "div",
-    { className: "more-info" },
+    'div',
+    { className: 'more-info' },
     _react2.default.createElement(
-      "h1",
+      'h1',
       null,
-      "More Info"
+      'More Info'
     ),
     _react2.default.createElement(
-      "h2",
+      'h2',
       null,
-      "Mission Statement"
+      'Mission Statement'
     ),
     _react2.default.createElement(
-      "p",
+      'p',
       null,
-      "This will be the mission statement"
+      'To provide fast, accurate shopping information to consumers seeking cruelty-free products in New Zealand.'
     ),
     _react2.default.createElement(
-      "h2",
+      'h2',
       null,
-      "Cruelty-Free Sources"
+      'Cruelty-Free Sources'
     ),
     _react2.default.createElement(
-      "p",
+      'p',
       null,
-      "This is where I talk about where I get my info from"
+      'We validate the products listed on our site using the SAFEshopper resource, which can be found ',
+      _react2.default.createElement(
+        'a',
+        { href: 'https://www.safe.org.nz/safeshopper-cruelty-free-nz' },
+        'here'
+      )
     ),
     _react2.default.createElement(
-      "h2",
+      'h2',
       null,
-      "Want in?"
+      'Want in?'
     ),
     _react2.default.createElement(
-      "p",
+      'p',
       null,
-      "This will be info about participating"
+      'If you sell or make cruelty-free products, we would love to hear from you! You can participate and help the project grow by providing feedback through our ',
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/contactus' },
+        'contact us'
+      ),
+      ' form, or you can submit a product / shop HERE.'
     )
   );
 };
