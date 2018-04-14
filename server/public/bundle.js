@@ -19760,10 +19760,10 @@ var App = function App() {
       _react2.default.createElement(
         'div',
         { className: 'routes' },
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _HomeLink2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Home2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Header2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _HomeInfo2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _HomeLink2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/moreinfo', component: _MoreInfo2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/listcities', component: _ListCities2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/citylist/:name', component: _CityList2.default }),
@@ -23564,7 +23564,7 @@ var Header = function Header() {
           { className: 'header-link' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/citylist' },
+            { to: '/listcities' },
             'Cities'
           )
         ),
@@ -23714,7 +23714,7 @@ var ListCities = function ListCities() {
     'div',
     { className: 'city-list' },
     _react2.default.createElement(
-      'h1',
+      'h2',
       null,
       'Cities:'
     ),

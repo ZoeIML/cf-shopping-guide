@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header-links-wrapper twelve-columns">
         <div className="header-links">
           <div className='header-link'>
-            <Link to="/citylist">Cities</Link>
+            <Link to="/listcities">Cities</Link>
           </div>
           <div className='header-link'>
             <Link to="/shoplist">Shops</Link>

@@ -36,10 +36,10 @@ const App = () => {
     <Router>
       <div className="app">
         <div className="routes">
+          <Route path='/' component={HomeLink}/>  
           <Route path='/' component={Home}/>
           <Route path='/' component={Header}/>
           <Route exact path='/' component={HomeInfo}/>
-          <Route path='/' component={HomeLink}/>
           <Route path='/moreinfo' component={MoreInfo}/>
           <Route path='/listcities' component={ListCities}/>
           <Route path="/citylist/:name" component={CityList}/>
