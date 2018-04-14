@@ -22,7 +22,7 @@ const ListProducts = (props) => {
                                     {product.type} 
                                 </div> 
                                 <div className="shop-link">
-                                    <Link to={`/${city}/products/shop`}>Available from</Link> 
+                                    <Link to={`/${city}/${product.name}/shops`}>Available from</Link> 
                                 </div>
                                 <br/>
                             </div>

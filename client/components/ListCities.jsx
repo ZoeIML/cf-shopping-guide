@@ -17,9 +17,6 @@ const ListCities = () => {
               <div className="products-link">
                 <Link to={`/${city.name}/products`}>Products</Link>
               </div>
-              <div className="brands-link">
-                <Link to={`/${city.name}/brands`}>Brands</Link>
-              </div>
               <div className="shops-link">
                 <Link to={`/${city.name}/shops`}>Shops</Link>
               </div>

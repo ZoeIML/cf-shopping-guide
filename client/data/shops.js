@@ -3,20 +3,35 @@ module.exports = {
         {
             id: 1,
             name: 'Farmers',
-            Address: '123 St Lukes Mall',
-            City: 'Auckland'
+            address: '123 St Lukes Mall',
+            city: 'Auckland',
+            url: 'www.farmers.co.nz',
+            products: [
+                'Sukin Cleanser',
+                'Honey Cleanser'
+            ]
         }, 
         {
             id: 2,
             name: 'Lush',
-            Address: '123 Queens Street',
-            City: 'Auckland'
+            address: '123 Queens Street',
+            city: 'Auckland',
+            url: 'www.lush.co.nz',
+            products: [
+                'Aqua Marina',
+                'Lord of Misrule'
+            ]
         }, 
         {
-            id: 1,
+            id: 3,
             name: 'Wellington Test Shop',
-            Address: '123 Cuba Street',
-            City: 'Wellington'
+            address: '123 Cuba Street',
+            city: 'Wellington',
+            url: 'www.testwellingtonurl.co.nz',
+            products: [
+                'Test Mascara',
+                'Go Cleanser'
+            ]
         }, 
     ]
 }

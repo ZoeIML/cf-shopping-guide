@@ -14,9 +14,10 @@ import HomeLink from './HomeLink'
 // List components: 
 import ListCities from './ListCities'
 import ListShops from './ListShops'
+import ListShopsByProduct from './ListShopsByProduct'
 // import CityList from './CityList'
 import ListProducts from './ListProducts'
-import ListBrands from './ListBrands'
+// import ListBrands from './ListBrands'
 
 // Map components:
 // import MapList from './MapList'
@@ -29,7 +30,6 @@ import MoreInfo from './MoreInfo'
 
 // Data:
 const brandData = require('../data/brands.js')
-const shopData = require('../data/shops.js')
 
 // App:
 const App = (props) => {
@@ -44,10 +44,8 @@ const App = (props) => {
           <Route path='/moreinfo' component={MoreInfo}/>
           <Route path='/cities' component={ListCities}/>
           <Route path='/:city/products' component={ListProducts}/>
-          <Route path=':city/brands' component={ListBrands}/>
           <Route path='/:city/shops' component={ListShops}/>
-          <Route path=':city/brands/shops' component={ListShops}/>
-          <Route path="/:city/products/shops" component={ListShops}/>
+          <Route path="/:city/:product/shops" component={ListShopsByProduct}/>
           <Route path='/' component={Footer}/>
         </div>
       </div>
