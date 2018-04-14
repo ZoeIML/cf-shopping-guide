@@ -19755,7 +19755,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Home components:
 // React:
-var productData = __webpack_require__(88);
+var brandData = __webpack_require__(89);
 
 // Map components:
 // import MapList from './MapList'
@@ -19768,7 +19768,6 @@ var productData = __webpack_require__(88);
 
 // List components: 
 
-var brandData = __webpack_require__(89);
 var shopData = __webpack_require__(90);
 
 // App:
@@ -23895,11 +23894,46 @@ var _ListShops2 = _interopRequireDefault(_ListShops);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var productData = __webpack_require__(88);
+
 var ListProducts = function ListProducts(props) {
+    var city = props.match.params.city;
+
     return _react2.default.createElement(
-        'h2',
-        null,
-        'Products:'
+        'div',
+        { className: 'product-list-wrapper' },
+        productData.products.map(function (product) {
+            if (product.city === city) {
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'product-list', key: product.id },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'product-listing' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'product-name' },
+                            product.name
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'product-type' },
+                            product.type
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'shop-link' },
+                            _react2.default.createElement(
+                                _reactRouterDom.Link,
+                                { to: '/' + city + '/products/shop' },
+                                'Available from'
+                            )
+                        ),
+                        _react2.default.createElement('br', null)
+                    )
+                );
+            }
+        })
     );
 };
 
@@ -23967,20 +24001,23 @@ module.exports = {
         id: 1,
         type: 'Cleanser',
         name: 'Sukin Cleanser',
-        Brand: 'Sukin',
-        Price: '$15'
+        brand: 'Sukin',
+        price: '$15',
+        city: 'Auckland'
     }, {
         id: 2,
         type: 'Cleanser',
         name: 'Aqua Marina',
-        Brand: 'Lush',
-        Price: '$25'
+        brand: 'Lush',
+        price: '$25',
+        city: 'Auckland'
     }, {
         id: 3,
         type: 'Mascara',
         name: 'Test Mascara',
-        Brand: 'Wellington Test Brand',
-        Price: '$17.99'
+        brand: 'Wellington Test Brand',
+        price: '$17.99',
+        city: 'Wellington'
     }]
 };
 

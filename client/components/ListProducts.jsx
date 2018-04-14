@@ -3,9 +3,34 @@ import {Link} from 'react-router-dom'
 
 import ListShops from './ListShops'
 
+const productData = require('../data/products.js')
+
 const ListProducts = (props) => {
+    const city = props.match.params.city
+
     return (
-        <h2>Products:</h2>
+        <div className="product-list-wrapper">
+            {productData.products.map(product => {
+                if (product.city === city) {
+                    return (
+                        <div className="product-list" key={product.id}>
+                            <div className="product-listing">
+                                <div className="product-name"> 
+                                    {product.name} 
+                                </div> 
+                                <div className="product-type">
+                                    {product.type} 
+                                </div> 
+                                <div className="shop-link">
+                                    <Link to={`/${city}/products/shop`}>Available from</Link> 
+                                </div>
+                                <br/>
+                            </div>
+                        </div>
+                    )
+                }
+            })}
+        </div>
     )
 }
 

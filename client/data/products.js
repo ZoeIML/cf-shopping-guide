@@ -4,22 +4,25 @@ module.exports = {
             id: 1,
             type: 'Cleanser',
             name: 'Sukin Cleanser',
-            Brand: 'Sukin',
-            Price: '$15'
+            brand: 'Sukin',
+            price: '$15',
+            city: 'Auckland'
         }, 
         {
             id: 2,
             type: 'Cleanser',
             name: 'Aqua Marina',
-            Brand: 'Lush',
-            Price: '$25'
+            brand: 'Lush',
+            price: '$25',
+            city: 'Auckland'
         }, 
         {
             id: 3,
             type: 'Mascara',
             name: 'Test Mascara',
-            Brand: 'Wellington Test Brand',
-            Price: '$17.99'
+            brand: 'Wellington Test Brand',
+            price: '$17.99',
+            city: 'Wellington'
         }, 
     ]
 }

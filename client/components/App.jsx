@@ -28,7 +28,6 @@ import MoreInfo from './MoreInfo'
 // impost AddCF from './AddCF
 
 // Data:
-const productData = require('../data/products.js')
 const brandData = require('../data/brands.js')
 const shopData = require('../data/shops.js')
 
