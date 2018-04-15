@@ -87,6 +87,16 @@ h2 {
 }
 
 /* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 0.75em;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+}
+
 .footer a {
     color: #292F36;
     text-decoration-line: none;
