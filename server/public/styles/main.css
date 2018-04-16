@@ -13,14 +13,30 @@ body {
 
 p {
     color: #292F36;
+    font-family: 'PT Sans', sans-serif;
 }
 
 h1 {
     color: #B76C76;
+    font-family: 'Yeseva One', cursive;
 }
 
 h2 {
     color: #4ECDC4;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h4 {
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+h5 {
+    font-family: 'Ubuntu', sans-serif;
 }
 
 /* Home */
@@ -53,6 +69,7 @@ h2 {
     justify-content: space-between;
     align-items: stretch;
     width: 60%;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .header-links a {
