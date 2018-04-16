@@ -16,7 +16,7 @@ p {
 }
 
 h1 {
-    color: #E8477A;
+    color: #B76C76;
 }
 
 h2 {
@@ -25,9 +25,7 @@ h2 {
 
 /* Home */
 .home {
-    color: #E8477A;
     text-align: center;
-    text-shadow: 0.5px 0.5px #292F36;
 }
 
 /* header */
