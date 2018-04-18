@@ -21,7 +21,7 @@ import ListProducts from './ListProducts'
 
 // Map components:
 // import MapList from './MapList'
-// import TheMap from '/.TheMap'
+import MapLite from './MapLite'
 
 // One-page components:
 import MoreInfo from './MoreInfo'
@@ -50,6 +50,8 @@ const App = (props) => {
           <Route path="/:city/:product/shops" component={ListShopsByProduct}/>
 
           {/* <Route path="/product-types" component={ListProductsByType}/> */}
+
+          <Route path='/maps' component={MapLite}/>
 
           <Route path='/' component={Footer}/>
         </div>
