@@ -19888,6 +19888,10 @@ var _ListProducts = __webpack_require__(36);
 
 var _ListProducts2 = _interopRequireDefault(_ListProducts);
 
+var _MapLite = __webpack_require__(91);
+
+var _MapLite2 = _interopRequireDefault(_MapLite);
+
 var _MoreInfo = __webpack_require__(89);
 
 var _MoreInfo2 = _interopRequireDefault(_MoreInfo);
@@ -19899,6 +19903,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Data:
 
+// import ListBrands from './ListBrands'
+
+// Map components:
+// import MapList from './MapList'
+
+
+// List components: 
+var brandData = __webpack_require__(90);
+
+// App:
+
+
+// One-page components:
+
 // import ListProductsByType from './ListProductsByType'
 
 
@@ -19907,20 +19925,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Home components:
 // React:
-var brandData = __webpack_require__(90);
-
-// App:
-
-// import ListBrands from './ListBrands'
-
-// Map components:
-// import MapList from './MapList'
-// import TheMap from '/.TheMap'
-
-// One-page components:
-
-
-// List components: 
 var App = function App(props) {
   return _react2.default.createElement(
     _reactRouterDom.HashRouter,
@@ -19940,6 +19944,7 @@ var App = function App(props) {
         _react2.default.createElement(_reactRouterDom.Route, { path: '/:city/products', component: _ListProducts2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/:city/shops', component: _ListShops2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/:city/:product/shops', component: _ListShopsByProduct2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/maps', component: _MapLite2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _Footer2.default })
       )
     )
@@ -24150,6 +24155,41 @@ module.exports = {
         name: 'Wellington Test Brand'
     }]
 };
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import {Link} from 'react-router-dom'
+
+var MapLite = function MapLite() {
+  return _react2.default.createElement(
+    "div",
+    { className: "map-container" },
+    _react2.default.createElement(
+      "h1",
+      null,
+      "Cruelty Free Map"
+    ),
+    _react2.default.createElement("iframe", { className: "map-lite",
+      src: "https://www.google.com/maps/d/u/0/embed?mid=1s8rGm1ptvjPUZ-1A_35w64QaUgxzFrZc", width: "640", height: "480" })
+  );
+};
+
+exports.default = MapLite;
 
 /***/ })
 /******/ ]);
