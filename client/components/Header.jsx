@@ -2,7 +2,7 @@ import React from 'react'
 
 import {Link} from 'react-router-dom'
 
-// Change to class component when dynamic
+// Use CSS and JS - JS for click to drop down and which part goes to which route
 
 const Header = () => {
   return (
