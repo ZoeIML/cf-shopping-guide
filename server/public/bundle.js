@@ -24235,8 +24235,7 @@ var TheMap = function (_React$Component) {
   _createClass(TheMap, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var theMap = L.map('mapid', { center: [51.505, -0.09],
-        zoom: 13 }).setView([51.505, -0.09], 13);
+      var theMap = L.map('mapid').setView([-36.8, 174.7], 13);
       this.props.renderMapTile(theMap);
       this.setState({
         theMap: theMap

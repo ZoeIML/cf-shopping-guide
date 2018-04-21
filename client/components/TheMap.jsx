@@ -10,10 +10,8 @@ class TheMap extends React.Component {
 
 
   componentDidMount () {
-    const theMap = L.map('mapid', 
-      {center: [51.505, -0.09],
-        zoom: 13})
-      .setView([51.505, -0.09], 13)
+    const theMap = L.map('mapid')
+      .setView([-36.8, 174.7], 13)
       this.props.renderMapTile(theMap)
     this.setState({
       theMap: theMap
