@@ -24228,19 +24228,9 @@ var TheMap = function (_React$Component) {
 
     _this.state = {
       theMap: []
-      // this.renderMapTile = this.renderMapTile.bind(this)
-    };return _this;
+    };
+    return _this;
   }
-
-  // renderMapTile (map) {
-  //   return L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-  //     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-  //     maxZoom: 18,
-  //     id: 'mapbox.streets',
-  //     accessToken: 'pk.eyJ1IjoiemltbCIsImEiOiJjamc4bXU1eXczdzNmMnFvNjRubGJob3d6In0.uPZmSpoQ18XOWGmAjsmfGQ'
-  // }).addTo(this.state.theMap)
-  // }
-
 
   _createClass(TheMap, [{
     key: 'componentDidMount',
