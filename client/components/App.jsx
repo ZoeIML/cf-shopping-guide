@@ -21,7 +21,7 @@ import ListProducts from './ListProducts'
 
 // Map components:
 // import MapList from './MapList'
-// import TheMap from '/.TheMap'
+import TheMap from './TheMap'
 
 // One-page components:
 import MoreInfo from './MoreInfo'
@@ -32,7 +32,24 @@ import MoreInfo from './MoreInfo'
 const brandData = require('../data/brands.js')
 
 // App:
-const App = (props) => {
+class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+
+    }
+    this.renderMapTile = this.renderMapTile.bind(this)
+  }
+
+  renderMapTile (map) {
+    return L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox.streets',
+      accessToken: 'pk.eyJ1IjoiemltbCIsImEiOiJjamc4bXU1eXczdzNmMnFvNjRubGJob3d6In0.uPZmSpoQ18XOWGmAjsmfGQ'
+  }).addTo(map)
+  }
+  render () {
   return (
     <Router>
       <div className="app">
@@ -51,11 +68,17 @@ const App = (props) => {
 
           {/* <Route path="/product-types" component={ListProductsByType}/> */}
 
+          <Route exact path='/maps' render={() => {
+            return <TheMap 
+              renderMapTile={this.renderMapTile}/>
+          }} />
+
           <Route path='/' component={Footer}/>
         </div>
       </div>
     </Router>
   )
+}
 }
 
 export default App

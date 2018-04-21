@@ -165,4 +165,9 @@ h2 {
 
 /* Contact Us */
 
-/* ? Refactoring */
+/* TheMap */
+
+#mapid {
+    height: 75vw;
+    width: 75vw;
+}
