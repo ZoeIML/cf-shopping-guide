@@ -4,11 +4,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="details">
-        <p>
-        Created by Zoe <br/>
-        Github: <a href="https://github.com/ZoeIML">ZoeIML</a><br/>
-        License: MIT
-        </p>
+        <p>Created by Zoe | </p>
+        <p>| Github: <a href="https://github.com/ZoeIML">ZoeIML | </a></p>
+        <p>| License: MIT</p>
       </div>
     </div>
   )
