@@ -2,6 +2,9 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
+// Data:
+import * as api from '../api'
+
 // Components:
 import Home from './Home'
 import HomeInfo from './HomeInfo'
