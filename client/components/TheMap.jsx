@@ -8,11 +8,10 @@ class TheMap extends React.Component {
     }
   }
 
-
   componentDidMount () {
     const theMap = L.map('mapid')
       .setView([-36.8, 174.7], 13)
-      this.props.renderMapTile(theMap)
+    this.props.renderMapTile(theMap)
     this.setState({
       theMap: theMap
     })
@@ -27,6 +26,5 @@ class TheMap extends React.Component {
     )
   }
 }
-
 
 export default TheMap
