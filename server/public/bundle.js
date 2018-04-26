@@ -19890,11 +19890,11 @@ var _ListProducts = __webpack_require__(36);
 
 var _ListProducts2 = _interopRequireDefault(_ListProducts);
 
-var _TheMap = __webpack_require__(91);
+var _TheMap = __webpack_require__(89);
 
 var _TheMap2 = _interopRequireDefault(_TheMap);
 
-var _MoreInfo = __webpack_require__(89);
+var _MoreInfo = __webpack_require__(90);
 
 var _MoreInfo2 = _interopRequireDefault(_MoreInfo);
 
@@ -19930,7 +19930,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // impost AddCF from './AddCF
 
 // Data:
-var brandData = __webpack_require__(90);
+var brandData = __webpack_require__(91);
 
 // App:
 
@@ -24110,6 +24110,70 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TheMap = function (_React$Component) {
+  _inherits(TheMap, _React$Component);
+
+  function TheMap(props) {
+    _classCallCheck(this, TheMap);
+
+    var _this = _possibleConstructorReturn(this, (TheMap.__proto__ || Object.getPrototypeOf(TheMap)).call(this, props));
+
+    _this.state = {
+      theMap: []
+    };
+    return _this;
+  }
+
+  _createClass(TheMap, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var theMap = L.map('mapid').setView([-36.8, 174.7], 13);
+      this.props.renderMapTile(theMap);
+      this.setState({
+        theMap: theMap
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'map-container' },
+        _react2.default.createElement('div', { id: 'mapid' })
+      );
+    }
+  }]);
+
+  return TheMap;
+}(_react2.default.Component);
+
+exports.default = TheMap;
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -24174,7 +24238,7 @@ var MoreInfo = function MoreInfo() {
 exports.default = MoreInfo;
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24192,70 +24256,6 @@ module.exports = {
         name: 'Wellington Test Brand'
     }]
 };
-
-/***/ }),
-/* 91 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var TheMap = function (_React$Component) {
-  _inherits(TheMap, _React$Component);
-
-  function TheMap(props) {
-    _classCallCheck(this, TheMap);
-
-    var _this = _possibleConstructorReturn(this, (TheMap.__proto__ || Object.getPrototypeOf(TheMap)).call(this, props));
-
-    _this.state = {
-      theMap: []
-    };
-    return _this;
-  }
-
-  _createClass(TheMap, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var theMap = L.map('mapid').setView([-36.8, 174.7], 13);
-      this.props.renderMapTile(theMap);
-      this.setState({
-        theMap: theMap
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'map-container' },
-        _react2.default.createElement('div', { id: 'mapid' })
-      );
-    }
-  }]);
-
-  return TheMap;
-}(_react2.default.Component);
-
-exports.default = TheMap;
 
 /***/ })
 /******/ ]);
